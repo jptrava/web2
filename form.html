@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle de Tarefas</title>
+    <style>
+      :root {
+        --cor-principal: #6c5ce7;
+        --cor-secundaria: #a29bfe;
+        --cor-texto: #333;
+        --cor-fundo: #f4f7f9;
+        --cor-sombra: rgba(0, 0, 0, 0.1);
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--cor-fundo);
+        color: var(--cor-texto);
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      main {
+        background: #fff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px var(--cor-sombra);
+        max-width: 800px;
+        width: 100%;
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+        color: var(--cor-principal);
+        margin-bottom: 25px;
+      }
+
+      section {
+        margin-bottom: 30px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      label {
+        font-weight: 600;
+        color: #555;
+      }
+
+      input[type='text'],
+      input[type='number'],
+      select {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+      }
+
+      button {
+        padding: 12px 20px;
+        background-color: var(--cor-principal);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: var(--cor-secundaria);
+      }
+
+      #lista-tarefas {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+      }
+
+      #lista-tarefas li {
+        background: #fafafa;
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #lista-tarefas li:last-child {
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Minhas Tarefas ✨</h1>
+      <ul id="lista-tarefas"></ul>
+
+      <section aria-labelledby="adicionar-tarefa">
+        <h2 id="adicionar-tarefa">Adicionar Tarefa</h2>
+        <form id="form-criar" autocomplete="off">
+          <label for="titulo">Título:</label>
+          <input
+            type="text"
+            id="titulo"
+            name="titulo"
+            placeholder="Digite o título da tarefa"
+            required
+          />
+
+          <label for="feito">Status:</label>
+          <select id="feito" name="feito">
+            <option value="false" selected>Pendente</option>
+            <option value="true">Concluída</option>
+          </select>
+
+          <button type="submit">Adicionar Tarefa</button>
+          <p id="mensagem-criar"></p>
+        </form>
+      </section>
+
+      ---
+
+      <section aria-labelledby="editar-tarefas">
+        <h2 id="editar-tarefas">Editar Tarefas</h2>
+        <form id="form-busca-id" autocomplete="off">
+          <label for="id-editar">ID da tarefa:</label>
+          <input
+            type="number"
+            id="id-editar"
+            name="id-editar"
+            min="1"
+            placeholder="Digite o ID para buscar"
+            required
+          />
+          <button type="submit">Buscar Tarefa</button>
+        </form>
+        <div id="form-editar-tarefa"></div>
+        <p id="mensagem-editar"></p>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
