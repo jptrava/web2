@@ -4,20 +4,20 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  color: #4a4e69; 
   background: none;
 }
 
 /* Body com background suave e padding */
 body {
-  background: #f5f7fa;
+  background: #fdf5e6;
   padding: 40px 20px;
 }
 
 /* Título principal */
 h1 {
   text-align: center;
-  color: #2c3e50;
+  color: #2f4f4f;
   margin-bottom: 40px;
   font-weight: 700;
   font-size: 2.5rem;
@@ -25,21 +25,21 @@ h1 {
 
 /* Seções */
 section {
-  background: white;
+  background: #ffffff;
   max-width: 700px;
   margin: 0 auto 50px auto;
   padding: 30px 40px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05); 
 }
 
 /* Títulos de seção */
 section > h2 {
   margin-bottom: 25px;
-  color: #34495e;
+  color: #2f4f4f; 
   font-weight: 700;
   font-size: 1.75rem;
-  border-bottom: 2px solid #2980b9;
+  border-bottom: 2px solid #48d1cc; 
   padding-bottom: 10px;
 }
 
@@ -47,7 +47,7 @@ section > h2 {
 h3 {
   margin-top: 40px;
   margin-bottom: 20px;
-  color: #34495e;
+  color: #2f4f4f; 
   font-weight: 600;
   font-size: 1.3rem;
 }
@@ -62,24 +62,24 @@ h3 {
 
 /* Itens da lista */
 .lista > div {
-  background: #ecf0f1;
+  background: #e6f9f8; 
   padding: 15px 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(44, 62, 80, 0.1);
+  box-shadow: 0 4px 8px rgba(47, 79, 79, 0.1); 
   transition: background 0.3s ease;
   cursor: default;
 }
 
 .lista > div:hover {
-  background: #d0d7de;
-  box-shadow: 0 6px 14px rgba(44, 62, 80, 0.2);
+  background: #ffdab9; 
+  box-shadow: 0 6px 14px rgba(47, 79, 79, 0.2); 
 }
 
 .lista > div strong {
   display: block;
   font-weight: 700;
   margin-bottom: 5px;
-  color: #2c3e50;
+  color: #2f4f4f; 
 }
 
 /* Formulários */
@@ -95,23 +95,23 @@ input[type="email"] {
   flex: 1 1 200px;
   padding: 10px 15px;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #c0c0c0; 
   transition: border-color 0.3s ease;
   font-size: 1rem;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus {
-  border-color: #2980b9;
+  border-color: #48d1cc; 
   outline: none;
 }
 
 /* Botão de submit */
 button {
-  background: #2980b9;
+  background: #48d1cc; 
   border: none;
   padding: 12px 30px;
-  color: white;
+  color: white; 
   font-weight: 600;
   border-radius: 8px;
   cursor: pointer;
@@ -122,5 +122,5 @@ button {
 }
 
 button:hover {
-  background: #1c5980;
+  background: #ff7f50; 
 }
