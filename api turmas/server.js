@@ -1,10 +1,10 @@
 const express = require("express");
 const path = require("path");
-const aplicacao = require("./src/app"); // seu app express principal
+const aplicacao = require("./src/app"); 
 const swaggerUi = require("swagger-ui-express");
 const swaggerJsdoc = require("swagger-jsdoc");
 
-// Configuração do Swagger
+
 const swaggerOptions = {
   definition: {
     openapi: "3.0.0",
@@ -88,16 +88,14 @@ const swaggerOptions = {
 
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
-// Serve os arquivos estáticos (CSS, JS, etc) da pasta src/view
 aplicacao.use("/src/view", express.static(path.join(__dirname, "src/view")));
 
-// Configuração das rotas do Swagger
+
 aplicacao.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-// Porta do servidor
 const PORTA = process.env.PORT || 3000;
 
-// Inicializa o servidor
+
 aplicacao.listen(PORTA, () => {
   console.log(`Servidor ativo em: http://localhost:${PORTA}`);
   console.log(`Documentação da API disponível em: http://localhost:${PORTA}/api-docs`);
