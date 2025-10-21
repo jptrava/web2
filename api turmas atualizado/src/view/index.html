@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Turmas e Alunos</title>
+  <link rel="stylesheet" href="/src/view/styles.css"/>
+</head>
+<body>
+  <h1>Cadastro de Turmas e Alunos</h1>
+  <section>
+    <h2>Turmas</h2>
+    <div id="turmas" class="lista"></div>
+
+    <h3>Nova Turma</h3>
+    <form id="formTurma">
+      <input type="text" id="turmaId" placeholder="ID (ex: WEB2)" required />
+      <input type="text" id="turmaNome" placeholder="Nome da Turma" required />
+      <button type="submit">Criar Turma</button>
+    </form>
+  </section>
+  
+  <section>
+    <h2>Alunos</h2>
+    <div id="alunos" class="lista"></div>
+
+    <h3>Novo Aluno</h3>
+    <form id="formAluno">
+      <input type="text" id="alunoNome" placeholder="Nome" required />
+      <input type="text" id="alunoProtocolo" placeholder="Prontuário" required />
+      <input type="text" id="alunoTurma" placeholder="ID da Turma" required />
+      <input type="email" id="alunoEmail" placeholder="Email" />
+      <button type="submit">Criar Aluno</button>
+    </form>
+  </section>
+
+  <script src="/src/view/script.js"></script>
+
+</body>
+</html>

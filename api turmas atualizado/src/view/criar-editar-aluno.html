@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Criar/Editar Aluno</title>
+  <link rel="stylesheet" href="/src/view/styles.css" />
+</head>
+<body>
+  <section>
+    <h2>Formulário de Aluno</h2>
+    <form id="formAluno">
+      <input type="hidden" id="alunoId" />
+      <input type="text" id="alunoNome" placeholder="Nome" required />
+      <input type="text" id="alunoProtocolo" placeholder="Prontuário" required />
+      <input type="text" id="alunoTurma" placeholder="ID da Turma" required />
+      <input type="email" id="alunoEmail" placeholder="Email" />
+      <button type="submit">Salvar Aluno</button>
+    </form>
+  </section>
+  <script src="/src/view/criar-editar-aluno.js"></script>
+</body>
+</html>
